@@ -1,6 +1,9 @@
 # Byte-compiled / optimized / DLL files
+.idea
 __pycache__/
 *.py[cod]
+*.pyc
+*.xml
 
 # C extensions
 *.so
