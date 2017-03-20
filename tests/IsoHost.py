@@ -54,10 +54,12 @@ while True:
         IsoPacket.Field(35, 0)
         IsoPacket.Field(52, 0)
         IsoPacket.Field(60, 0)
+
+        IsoPacket.setBitMap()
          
         print("\n\n\n")
         IsoPacket.PrintMessage()
-        data = IsoPacket.BuildIso()
+        data = Str2Bcd('6000000001') + IsoPacket.BuildIso()
         data = struct.pack("!H", len(data)) + data
          
         MemDump("Sending:", data)
